@@ -1,0 +1,36 @@
+<?php 
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+
+/**
+ * BlueFoot
+ *
+ * Version 1.0
+ * @author Hob Adams <hob@gene.co.uk>
+ *
+ * Carousel Slider Item Template
+ * @var $this \Gene\BlueFoot\Block\Entity\PageBuilder\Block\AbstractBlock
+ *
+ */
+$_entity = $this->getEntity();
+$_urlPrefix = $block->getMediaUrl() . 'gene-cms';
+
+?>
+<div class="sh-process-steps-item <?php echo $this->getCssAttributes(); ?>"<?php echo $this->getStyleAttributes(); ?>>
+    <div class="img-block">
+        <?php if ($_entity->getMobileImage()): ?>
+            <img src="<?php echo $_urlPrefix . $_entity->getImage(); ?>"  alt="<?php echo $_entity->getAltTag(); ?>" title="<?php echo $_entity->getTitleTag(); ?>" class="bluefoot-mobile-hidden"/>
+            <img src="<?php echo $_urlPrefix . $_entity->getMobileImage(); ?>"  alt="<?php echo $_entity->getAltTag(); ?>" title="<?php echo $_entity->getTitleTag(); ?>" class="bluefoot-mobile-only"/>
+        <?php else: ?>
+            <img src="<?php echo $_urlPrefix . $_entity->getImage(); ?>"  alt="<?php echo $_entity->getAltTag(); ?>" title="<?php echo $_entity->getTitleTag(); ?>" />
+        <?php endif; ?>
+    </div>
+    <div class="title">
+        <h4 class=""><?php echo $_entity->getTitle(); ?></h4>
+    </div>
+    <div class="sub-text">
+        <p class=""><?php echo $_entity->getSubText(); ?></p>
+    </div>
+</div>

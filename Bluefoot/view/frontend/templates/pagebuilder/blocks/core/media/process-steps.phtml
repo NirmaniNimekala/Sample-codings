@@ -1,0 +1,40 @@
+<?php 
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+
+/**
+ * BlueFoot
+ *
+ * Version 1.0
+ * @author Hob Adams <hob@gene.co.uk>
+ *
+ * Carousel Slider Item Template
+ * @var $this \Gene\BlueFoot\Block\Entity\PageBuilder\Block\AbstractBlock
+ *
+ */
+$_entity = $this->getEntity();
+$_urlPrefix = $block->getMediaUrl() . 'gene-cms';
+
+?>
+<?php if ($this->hasChildEntities('process_step_item')): ?>
+<div class="sh-process-steps <?php echo $this->getCssAttributes(); ?>"<?php echo $this->getStyleAttributes(); ?>>
+    <div class="block-title">
+        <h2 class=""><?php echo $_entity->getTitle(); ?></h2>
+    </div>
+
+
+    <?php $_collection = $this->getChildEntities('process_step_item'); ?>
+    <div class="steps-items"<?php echo $this->getStyleAttributes(); ?>>
+        <?php foreach ($_collection as $_block): ?>
+            <?php echo $_block->toHtml(); ?>
+        <?php endforeach; ?>
+    </div>
+
+    <div class="link-text">
+        <a href="<?php echo $_entity->getLinkUrl(); ?>"><span><?php echo $_entity->getLinkText(); ?></span></a>
+    </div>
+
+</div>
+<?php endif; ?>

@@ -1,0 +1,62 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+
+/**
+ * BlueFoot
+ *
+ * Version 1.0
+ * @author Hob Adams <hob@gene.co.uk>
+ *
+ * Carousel Slider Item Template
+ * @var $this \Gene\BlueFoot\Block\Entity\PageBuilder\Block\AbstractBlock
+ *
+ */
+$_entity = $this->getEntity();
+$_urlPrefix = $block->getMediaUrl() . 'gene-cms';
+
+?>
+<div class="subscription-select-opt <?php echo $this->getCssAttributes(); ?>"  <?php echo $this->getStyleAttributes(); ?>>
+      <div class="top-image-wrap">
+          <?php //$iconPosition =  $_entity->getResource()->getAttribute('subscription_label_position')->getFrontend()->getValue($_entity)?>
+            <?php if ($_entity->getSubscriptionLabelImage()): ?>
+                <img src="<?php echo $_urlPrefix . $_entity->getSubscriptionLabelImage(); ?>" class="lable-icon" />
+            <?php endif; ?>
+
+        <a href="<?php echo $_entity->getLinkUrl(); ?>">
+            <?php if ($_entity->getMobileImage()): ?>
+                <img src="<?php echo $_urlPrefix . $_entity->getImage(); ?>"  alt="<?php echo $_entity->getAltTag(); ?>" title="<?php echo $_entity->getTitleTag(); ?>" class="bluefoot-mobile-hidden"/>
+                <img src="<?php echo $_urlPrefix . $_entity->getMobileImage(); ?>"  alt="<?php echo $_entity->getAltTag(); ?>" title="<?php echo $_entity->getTitleTag(); ?>" class="bluefoot-mobile-only"/>
+            <?php else: ?>
+                <img src="<?php echo $_urlPrefix . $_entity->getImage(); ?>"  alt="<?php echo $_entity->getAltTag(); ?>" title="<?php echo $_entity->getTitleTag(); ?>" />
+            <?php endif; ?>
+        </a>
+    </div>
+
+    <div class="subscription-info-container">
+    <div class="block-title">
+        <h2 class="plan-title"><?php echo $_entity->getTitle(); ?></h2>
+    </div>
+    <div class="paln-info">
+        <div class="selection-info">
+                <?php echo $_entity->getSubscriptionPlanInformation(); ?>
+        </div>
+        <?php if ($_entity->getSubscriptionPlanPrice()): ?>
+            <div class="price">
+                <?php echo $_entity->getSubscriptionPlanPrice(); ?>
+            </div>
+        <?php endif; ?>
+    </div>
+    <div class="action">
+        <a class="paln-link button" href="<?php echo $_entity->getLinkUrl(); ?>"><span><?php echo $_entity->getLinkText(); ?></span></a>
+    </div>
+    <div class="usp-list">
+        <?php echo $_entity->getSubscriptionPlanUsp(); ?>
+    </div>
+    </div>
+</div>
+
+
+

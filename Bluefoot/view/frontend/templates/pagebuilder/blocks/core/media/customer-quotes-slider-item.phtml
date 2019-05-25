@@ -1,0 +1,47 @@
+<?php 
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+
+/**
+ * BlueFoot
+ *
+ * Version 1.0
+ * @author Conor Farrell <conor@gene.co.uk>
+ *
+ * Carousel Slider Item Template
+ * @var $this \Gene\BlueFoot\Block\Entity\PageBuilder\Block\AbstractBlock
+ *
+ */
+$_entity = $this->getEntity();
+$_count = $this->getCount();
+$_urlPrefix = $block->getMediaUrl() . 'gene-cms';
+$this->setStyles('background-image: url(' . $_urlPrefix . $_entity->getBackgroundImage() . ');');
+$_classes = 'slide-' . $_count;
+// Hide all but the first slide
+if ($_count > 1):
+    $_classes .= ' hidden-on-load';
+endif;
+// If there is a link but no button make the whole slide link
+$_noButtonLink = '';
+if (!$_entity->getLinkText() && $_entity->getLinkUrl()):
+    $_classes .=' bluefoot-slide-with-link';
+    $_noButtonLink = 'onclick="location.href=\'' . $_entity->getLinkUrl() . '\'"';
+endif;
+$_color = $_entity->getTextColor();
+$this->setCssClasses($_classes);
+?>
+<li class="customer-quote-item <?php echo $this->getCssAttributes(); ?>"
+        data-customer-name="<?php echo $_entity->getFirstName(); ?>"
+        data-customer-image="<?php echo $_urlPrefix . $_entity->getImage(); ?>"
+        data-customer-image-mob="<?php echo $_urlPrefix . $_entity->getImageMobile(); ?>"
+        data-customer-extra-info="<?php echo $_entity->getExtraInfo(); ?>">
+    <div class="quote-block">
+                <?php if ($_entity->getCustomerQuote()): ?>
+                    <div class="quote-text">
+                        <?php echo $_entity->getCustomerQuote(); ?>
+                    </div>
+                <?php endif; ?>
+    </div>
+</li>

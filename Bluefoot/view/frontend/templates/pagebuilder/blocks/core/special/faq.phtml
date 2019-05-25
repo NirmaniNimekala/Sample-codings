@@ -1,0 +1,38 @@
+<?php 
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+
+/**
+ * BlueFoot
+ *
+ * Version 1.0
+ * @author Hob Adams <hob@gene.co.uk>
+ *
+ * Accordion Block Template
+ * @var $this \Gene\BlueFoot\Block\Entity\PageBuilder\Block\AbstractBlock
+ *
+ */
+$_entity = $this->getEntity();
+?>
+<?php if ($this->hasChildEntities('faq_items')): ?>
+    <?php $_collection = $this->getChildEntities('faq_items'); ?>
+
+    <div id="bluefoot-faq-<?php echo $_entity->getId(); ?>" class="bluefoot-faq bluefoot-full-width <?php echo $this->getCssAttributes(); ?>"<?php echo $this->getStyleAttributes(); ?>>
+        <div class="title"><h2><?php echo $_entity->getTitle(); ?></h2></div>
+        <?php foreach ($_collection as $_block): ?>
+            <?php echo $_block->toHtml(); ?>
+        <?php endforeach; ?>
+    </div>
+
+    <script type="text/javascript">
+        require(['jquery','accordion'], function($) {
+            $('#bluefoot-faq-<?php echo $_entity->getId(); ?>').accordion({
+                animate: 300,
+                collapsible: true,
+                active: false
+            });
+        });
+    </script>
+<?php endif; ?>

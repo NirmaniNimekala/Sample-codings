@@ -1,0 +1,71 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+
+/**
+ * BlueFoot
+ *
+ * Version 1.0
+ * @author Hob Adams <hob@gene.co.uk>
+ *
+ * Accordion Block Template
+ * @var $this \Gene\BlueFoot\Block\Entity\PageBuilder\Block\AbstractBlock
+ *
+ */
+$_entity = $this->getEntity();
+$_urlPrefix = $block->getMediaUrl() . 'gene-cms';
+?>
+<?php if ($this->hasChildEntities('product_usp_item')): ?>
+    <div class="sh-usp-wrapper">
+        <div class="sh-image-block">
+            <div>
+                <?php if ($_entity->getMobileImage()): ?>
+                    <img src="<?php echo $_urlPrefix . $_entity->getImage(); ?>" alt="<?php echo $_entity->getAltTag(); ?>" title="<?php echo $_entity->getTitleTag(); ?>" class="bluefoot-mobile-hidden" />
+                    <img src="<?php echo $_urlPrefix . $_entity->getMobileImage(); ?>"  alt="<?php echo $_entity->getAltTag(); ?>" title="<?php echo $_entity->getTitleTag(); ?>" class="bluefoot-mobile-only"/>
+                <?php else: ?>
+                    <img src="<?php echo $_urlPrefix . $_entity->getImage(); ?>" alt="<?php echo $_entity->getAltTag(); ?>" title="<?php echo $_entity->getTitleTag(); ?>" />
+                <?php endif; ?>
+            </div>
+        </div>
+        <div class="sh-accordian-block">
+
+            <div class="title">
+                <h2><?php echo $_entity->getTitle(); ?></h2>
+            </div>
+            <div class="sub-title">
+                <h3><?php echo $_entity->getSubTitle(); ?></h3>
+            </div>
+
+            <?php $_collection = $this->getChildEntities('product_usp_item'); ?>
+            <div id="bluefoot-accordion-<?php echo $_entity->getId(); ?>" class="bluefoot-accordion <?php echo $this->getCssAttributes(); ?>"<?php echo $this->getStyleAttributes(); ?>>
+                <?php foreach ($_collection as $_block): ?>
+                    <?php echo $_block->toHtml(); ?>
+                <?php endforeach; ?>
+            </div>
+
+            <script type="text/javascript">
+                require(['jquery','bluefoot/accordion'], function(jQuery) {
+                    jQuery('#bluefoot-accordion-<?php echo $_entity->getId(); ?>').bluefootAccordion();
+                });
+            </script>
+
+            <div class="link-text">
+                <a href="<?php echo $_entity->getLinkUrl(); ?>"><span><?php echo $_entity->getLinkText(); ?></span></a>
+            </div>
+
+            <script type="text/javascript">
+                require(['jquery'], function(jQuery) {
+                    if(jQuery(window).width() < 480){
+                        var link = jQuery('.link-text a').attr('href');
+                        jQuery('.link-text').click(function(){
+                            window.location.href = link;
+                        });
+                    }
+
+                });
+            </script>
+        </div>
+    </div>
+<?php endif; ?>

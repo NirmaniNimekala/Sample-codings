@@ -1,0 +1,78 @@
+<?php 
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+
+/**
+ * BlueFoot
+ *
+ * Version 1.0
+ * @author Chloe Langford <chloe@gene.co.uk>
+ *
+ * Map Block Template
+ * @var $this @var $this \Gene\BlueFoot\Block\Entity\PageBuilder\Block\Video
+ *
+ */
+$_entity = $this->getEntity();
+$_video_path = $_entity->getUploadVideo();
+$_video = $this->getVideoData();
+$_image = $_entity->getBackgroundImage();
+$_urlPrefix = $block->getMediaUrl() . 'gene-cms';
+$_styles = '';
+if ($_entity->getVideoHeight()): $_styles .= 'height:' . $_entity->getVideoHeight() . ';'; endif;
+if ($_entity->getVideoWidth()): $_styles .= 'width:' . $_entity->getVideoWidth() . ';'; endif;
+?>
+
+<?php if($_video_path): ?>
+   <div id="bluefoot-video-<?php echo $_entity->getEntityId(); ?>" data-poster="<?php echo  $_urlPrefix . $_image?>" data-src="<?php echo  $_urlPrefix . $_video_path?>" class="bluefoot-video local-video  <?php echo $this->getCssAttributes(); ?>"<?php echo $this->getStyleAttributes(); ?>>
+        <video autoplay="autoplay" muted loop="loop" class="video auto" width="100%" height="100%">
+            <source src="" type="video/mp4">
+        </video>
+    </div>
+    <div class="mobile-image" style="display: none">
+        <img src="<?php echo  $_urlPrefix . $_image?>" alt="">
+    </div>
+
+    <script type="text/javascript">
+            require(['jquery','matchMedia','mage/mage'], function($,mediaCheck) {
+
+                $(document).ready(function() {
+                    mediaCheck({
+                        media: '(min-width: 768px)',
+                        // Switch to Desktop Version
+                        entry: function () {
+                            $('.mobile-image').hide();
+                            $('video').show();
+                            $('video').each(function(){
+                                let src = $(this).parent('div').attr('data-src');
+                                let video = this;
+                                this.setAttribute('src', src);
+                                this.setAttribute('poster', '');
+                                this.play();
+                            })
+                        },
+                        // Switch to Mobile Version
+                        exit: function () {
+
+                            $('video').each(function(){
+                                let poster = $(this).parent('div').attr('data-poster');
+
+                                this.pause();
+                                this.setAttribute('src', '');
+                                this.setAttribute('poster', poster);
+                            });
+                            $('.mobile-image').show();
+                            $('video').hide();
+
+                        }
+                    })
+
+                });
+
+
+            });
+
+
+    </script>
+<?php endif; ?>

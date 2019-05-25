@@ -1,0 +1,81 @@
+<?php 
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+
+/**
+ * BlueFoot
+ *
+ * Version 1.0
+ * @author Hob Adams <hob@gene.co.uk>
+ *
+ * Carousel Slider Item Template
+ * @var $this \Gene\BlueFoot\Block\Entity\PageBuilder\Block\AbstractBlock
+ *
+ */
+$_entity = $this->getEntity();
+$_count = $this->getCount();
+$_urlPrefix = $block->getMediaUrl() . 'gene-cms';
+$_classes = 'slide-' . $_count;
+
+$deviceDetectHelper = $this->helper('ISM\Bluefoot\Helper\DeviceDetect');
+
+// Hide all but the first slide
+if ($_count > 1):
+    $_classes .= ' hidden-on-load';
+else:
+    $_classes .= ' first-image';
+endif;
+
+$this->setCssClasses($_classes);
+?>
+
+<div  class="<?php echo $this->getCssAttributes(); ?>"<?php echo $this->getStyleAttributes(); ?>>
+
+    <?php if ($_entity->getLinkUrl()): ?>
+        <a href="<?php echo $_entity->getLinkUrl(); ?>"
+           data-banner-position="<?= $_count ?>" class="bluefoot-slide-content"<?php echo ($_entity->getTargetBlank()) ? ' target="_blank"':'' ; ?>
+           data-banner-creative="<?php echo $_entity->getGtmCreative(); ?>"
+           data-banner-id="<?php echo $_entity->getPromoBannerId(); ?>"
+           data-banner-title="<?php echo $_entity->getTitleTag(); ?>"
+            <?php if($this->helper('Magento\GoogleTagManager\Helper\Data')->isTagManagerAvailable()) :?>
+                data-mage-init='{ "promoClick": {
+                        "id": "<?php echo $_entity->getPromoBannerId(); ?>",
+                        "name": "<?php echo $_entity->getTitleTag(); ?>",
+                        "creative" : "<?php echo $_entity->getGtmCreative(); ?>",
+                        "position": "<?= $_count ?>"
+           } }'
+            <?php endif ;?>
+        >
+    <?php else: ?>
+        <span class="bluefoot-slide-content" data-banner-position="<?= $_count ?>"
+              data-banner-creative="<?php echo $_entity->getGtmCreative(); ?>"
+              data-banner-id="<?php echo $_entity->getPromoBannerId(); ?>"
+              data-banner-title="<?php echo $_entity->getTitleTag(); ?>"
+              data-banner-title="<?php echo $_entity->getTitleTag(); ?>">
+    <?php endif ;?>
+            <?php if ($_count == 1): ?>
+                <picture>
+                        <source srcset="<?php echo ($_entity->getMobileImage()) ? $_urlPrefix . $_entity->getMobileImage() : '';?>"  media="(max-width: 600px)">
+                        <source srcset="<?php echo $_urlPrefix . $_entity->getMediumImage();?>" media="(max-width: 1200px)">
+                        <source srcset="<?php echo ($_entity->getImage()) ? $_urlPrefix . $_entity->getImage() : '';?>" media="(min-width: 1200px)">
+                        <img src="<?php echo $_urlPrefix . $_entity->getMediumImage();?>" alt="<?php echo $_entity->getAltTag(); ?>"  title="<?php echo $_entity->getTitleTag(); ?>">
+                </picture>
+            <?php else: ?>
+                <picture>
+                        <source data-small="<?php echo ($_entity->getMobileImage()) ? $_urlPrefix . $_entity->getMobileImage() : '';?>"  media="(max-width: 600px)">
+                        <source data-middle="<?php echo $_urlPrefix . $_entity->getMediumImage();?>" media="(max-width: 1200px)">
+                        <source data-large="<?php echo ($_entity->getImage()) ? $_urlPrefix . $_entity->getImage() : '';?>" media="(min-width: 1200px)">
+                        <img data-middle="<?php echo $_urlPrefix . $_entity->getMediumImage();?>" alt="<?php echo $_entity->getAltTag(); ?>"  title="<?php echo $_entity->getTitleTag(); ?>">
+                </picture>
+            <?php endif; ?>
+    <?php if ($_entity->getLinkUrl()): ?>
+        </a>
+    <?php else: ?>
+        </span>
+    <?php endif ;?>
+</div>
+
+
+

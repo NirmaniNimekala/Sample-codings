@@ -1,0 +1,259 @@
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/32c594");
+
+
+@font-face {font-family: 'freightsans_probook_italic';
+    src: url('../fonts/32C594_0_0.eot');
+    src: url('../fonts/32C594_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/32C594_0_0.woff2') format('woff2'),
+    url('../fonts/32C594_0_0.woff') format('woff'),
+    url('../fonts/32C594_0_0.ttf') format('truetype');
+}
+
+
+@font-face {font-family: 'freightsans_problack_italic';
+    src: url('../fonts/32C594_1_0.eot');
+    src: url('../fonts/32C594_1_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_1_0.woff2') format('woff2'),
+    url('../fonts/32C594_1_0.woff') format('woff'),
+    url('../fonts/32C594_1_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'freightsans_probold_italic';
+    src: url('../fonts/32C594_2_0.eot');
+    src: url('../fonts/32C594_2_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_2_0.woff2') format('woff2'),
+    url('../fonts/32C594_2_0.woff') format('woff'),
+    url('../fonts/32C594_2_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'FreightSansProSemibold-Italic';
+    src: url('../fonts/32C594_3_0.eot');
+    src: url('../fonts/32C594_3_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_3_0.woff2') format('woff2'),
+    url('../fonts/32C594_3_0.woff') format('woff'),
+    url('../fonts/32C594_3_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'freightsans_promedium_italic';
+    src: url('../fonts/32C594_4_0.eot');
+    src: url('../fonts/32C594_4_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_4_0.woff2') format('woff2'),
+    url('../fonts/32C594_4_0.woff') format('woff'),
+    url('../fonts/32C594_4_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'freightsans_prolight_italic';
+    src: url('../fonts/32C594_5_0.eot');
+    src: url('../fonts/32C594_5_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_5_0.woff2') format('woff2'),
+    url('../fonts/32C594_5_0.woff') format('woff'),
+    url('../fonts/32C594_5_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'freightsans_prosemibold';
+    src: url('../fonts/32C594_6_0.eot');
+    src: url('../fonts/32C594_6_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_6_0.woff2') format('woff2'),
+    url('../fonts/32C594_6_0.woff') format('woff'),
+    url('../fonts/32C594_6_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'freightsans_prolight';
+    src: url('../fonts/32C594_7_0.eot');
+    src: url('../fonts/32C594_7_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_7_0.woff2') format('woff2'),
+    url('../fonts/32C594_7_0.woff') format('woff'),
+    url('../fonts/32C594_7_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'freightsans_problack';
+    src: url('../fonts/32C594_8_0.eot');
+    src: url('../fonts/32C594_8_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_8_0.woff2') format('woff2'),
+    url('../fonts/32C594_8_0.woff') format('woff'),
+    url('../fonts/32C594_8_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'freightsans_probold';
+    src: url('../fonts/32C594_9_0.eot');
+    src: url('../fonts/32C594_9_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_9_0.woff2') format('woff2'),
+    url('../fonts/32C594_9_0.woff') format('woff'),
+    url('../fonts/32C594_9_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'freightsans_promedium';
+    src: url('../fonts/32C594_A_0.eot');
+    src: url('../fonts/32C594_A_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_A_0.woff2') format('woff2'),
+    url('../fonts/32C594_A_0.woff') format('woff'),
+    url('../fonts/32C594_A_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'adellebold';
+    src: url('../fonts/32C594_B_0.eot');
+    src: url('../fonts/32C594_B_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_B_0.woff2') format('woff2'),
+    url('../fonts/32C594_B_0.woff') format('woff'),
+    url('../fonts/32C594_B_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'adellebold_italic';
+    src: url('../fonts/32C594_C_0.eot');
+    src: url('../fonts/32C594_C_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_C_0.woff2') format('woff2'),
+    url('../fonts/32C594_C_0.woff') format('woff'),
+    url('../fonts/32C594_C_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'adelleextrabold';
+    src: url('../fonts/32C594_D_0.eot');
+    src: url('../fonts/32C594_D_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_D_0.woff2') format('woff2'),
+    url('../fonts/32C594_D_0.woff') format('woff'),
+    url('../fonts/32C594_D_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'adelleextrabold_italic';
+    src: url('../fonts/32C594_E_0.eot');
+    src: url('../fonts/32C594_E_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_E_0.woff2') format('woff2'),
+    url('../fonts/32C594_E_0.woff') format('woff'),
+    url('../fonts/32C594_E_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'adelleheavy';
+    src: url('../fonts/32C594_F_0.eot');
+    src: url('../fonts/32C594_F_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_F_0.woff2') format('woff2'),
+    url('../fonts/32C594_F_0.woff') format('woff'),
+    url('../fonts/32C594_F_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'adelleheavy_italic';
+    src: url('../fonts/32C594_10_0.eot');
+    src: url('../fonts/32C594_10_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_10_0.woff2') format('woff2'),
+    url('../fonts/32C594_10_0.woff') format('woff'),
+    url('../fonts/32C594_10_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'adelleitalic';
+    src: url('../fonts/32C594_11_0.eot');
+    src: url('../fonts/32C594_11_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_11_0.woff2') format('woff2'),
+    url('../fonts/32C594_11_0.woff') format('woff'),
+    url('../fonts/32C594_11_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'adellelight';
+    src: url('../fonts/32C594_12_0.eot');
+    src: url('../fonts/32C594_12_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_12_0.woff2') format('woff2'),
+    url('../fonts/32C594_12_0.woff') format('woff'),
+    url('../fonts/32C594_12_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'adellelight_italic';
+    src: url('../fonts/32C594_13_0.eot');
+    src: url('../fonts/32C594_13_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_13_0.woff2') format('woff2'),
+    url('../fonts/32C594_13_0.woff') format('woff'),
+    url('../fonts/32C594_13_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'adelleregular';
+    src: url('../fonts/32C594_14_0.eot');
+    src: url('../fonts/32C594_14_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_14_0.woff2') format('woff2'),
+    url('../fonts/32C594_14_0.woff') format('woff'),
+    url('../fonts/32C594_14_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'adellesemibold';
+    src: url('../fonts/32C594_15_0.eot');
+    src: url('../fonts/32C594_15_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_15_0.woff2') format('woff2'),
+    url('../fonts/32C594_15_0.woff') format('woff'),
+    url('../fonts/32C594_15_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'adellesemibold_italic';
+    src: url('../fonts/32C594_16_0.eot');
+    src: url('../fonts/32C594_16_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_16_0.woff2') format('woff2'),
+    url('../fonts/32C594_16_0.woff') format('woff'),
+    url('../fonts/32C594_16_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'adellethin';
+    src: url('../fonts/32C594_17_0.eot');
+    src: url('../fonts/32C594_17_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_17_0.woff2') format('woff2'),
+    url('../fonts/32C594_17_0.woff') format('woff'),
+    url('../fonts/32C594_17_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'adellethin_italic';
+    src: url('../fonts/32C594_18_0.eot');
+    src: url('../fonts/32C594_18_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_18_0.woff2') format('woff2'),
+    url('../fonts/32C594_18_0.woff') format('woff'),
+    url('../fonts/32C594_18_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'freightsans_probook';
+    src: url('../fonts/32C594_19_0.eot');
+    src: url('../fonts/32C594_19_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/32C594_19_0.woff2') format('woff2'),
+    url('../fonts/32C594_19_0.woff') format('woff'),
+    url('../fonts/32C594_19_0.ttf') format('truetype');
+}

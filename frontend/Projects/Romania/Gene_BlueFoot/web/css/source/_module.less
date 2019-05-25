@@ -1,0 +1,216 @@
+//homepage slider
+.top-slider-contaier{
+  .widget{
+    position: relative;
+  }
+
+  .bluefoot-row{
+    margin: 0px ;
+  }
+
+  .bluefoot-wrapper{
+    max-width: 100%;
+    margin: 0px;
+    padding: 0px;
+    //overflow: hidden;
+
+    .widget.block.block-static-block{
+      position: relative;
+    }
+
+    .bluefoot-row.bluefoot-structural{
+      margin: 0px;
+    }
+    .slick-dots{
+      position: absolute;
+      left: 0;
+      right: 10px;
+      margin: 0 auto;
+      bottom: 48px;
+      text-align: center;
+      li {
+        button{
+          display: block;
+          width: 10px !important;
+          height: 10px;
+          margin: 5px 4px;
+          background: #000;
+          border: 2px solid #000;
+          border-radius: 10px;
+          opacity: 0.5;
+
+          &:hover{
+            background-color: #ffffff;
+            opacity: 1;
+          }
+        }
+        &.slick-active button{
+          background-color: #ffffff;
+          border: 2px solid #ffffff;
+          opacity: 1;
+        }
+      }
+    }
+    .bluefoot-advanced-slide{
+      min-height: 773px;
+    }
+    .bluefoot-slider.bluefoot-slider-with-dots{
+      margin-bottom: 0px;
+    }
+  }
+  .home-page-slider-arrow{
+    position: relative !important;
+  }
+}
+.farmer-component-homepage{
+  .slick-dots{
+    position: absolute;
+    left: 0;
+    right: 10px;
+    margin: 0 auto;
+    bottom: 38px;
+    text-align: center;
+    li {
+      display: inline-block;
+      button{
+        display: block;
+        width: 10px !important;
+        height: 10px;
+        margin: 5px 4px;
+        background: #000;
+        border: 2px solid #000;
+        border-radius: 10px;
+        opacity: 0.5;
+        text-indent: -9999px;
+        line-height: 15px;
+        padding: 0 !important;
+
+        &:hover{
+          background-color: #ffffff;
+          opacity: 1;
+        }
+      }
+      &.slick-active button{
+        background-color: #ffffff;
+        border: 2px solid #ffffff;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.category-tab-slider-home-page{
+  .bluefoot-wrapper{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.farmer-component{
+  .bluefoot-slider{
+    background: none;
+  }
+}
+
+@media(min-width: 768px){
+  .bluefoot-video.local-video{
+    position: relative;
+
+    .video-buttons{
+      color: white;
+      font-size: 25px;
+      margin-left: -50px;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      border: 5px solid;
+      position: absolute;
+      line-height: 45px;
+      bottom: 5px;
+      left: 5%;
+      z-index: 2;
+      text-align: center;
+
+      i{
+        line-height: 42px;
+      }
+    }
+  }
+}
+@media(max-width: 768px){
+  .video-buttons{
+    display: none;
+  }
+
+  .bluefoot-wrapper{
+    .bluefoot-advanced-slide{
+      min-height: 420px !important;
+    }
+  }
+}
+@media(max-width: 767px) and  (min-width: 480px){
+  .farmer-component-homepage.slick-initialized{
+    img{
+      display: block;
+    }
+  }
+  .farmer-component-homepage{
+    >div:first-child, >div:nth-child(2){
+      img{
+        display: block;
+      }
+    }
+    img{
+      display: none;
+    }
+  }
+}
+@media(max-width: 480px){
+  .farmer-component-homepage.slick-initialized{
+    img{
+      display: block;
+    }
+  }
+  .farmer-component-homepage{
+    >div:first-child{
+      img{
+        display: block;
+      }
+    }
+    img{
+      display: none;
+    }
+  }
+}
+
+@media(max-width: 420px){
+  .bluefoot-wrapper{
+    .bluefoot-advanced-slide{
+      min-height: 300px !important;
+      overflow-y: hidden;
+    }
+  }
+
+  .bluefoot-row{
+    margin: 0px !important;
+  }
+
+  .slider-bottom{
+    margin-top: -11px !important;
+  }
+
+  .category-tab-slider{
+    .container{
+      padding-right: 15px !important;
+      padding-left: 15px !important;
+    }
+  }
+}
+
+@media(max-width: 320px){
+  .bluefoot-wrapper{
+    .bluefoot-advanced-slide{
+      min-height: 240px !important;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo-elite.svg</argument>
+                <argument name="logo_img_width" xsi:type="number">141</argument>
+                <argument name="logo_img_height" xsi:type="number">75</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceContainer name="page.top">
+            <container name="top.slider-container" as="topSliderContainer" label="Top Slider Container" htmlTag="div" htmlClass="top-slider-contaier" after="page.top"/>
+        </referenceContainer>
+        <move element="top_nav_block" destination="custom.topnav"/>
+
+		<referenceBlock name="top.search" remove="true" />
+            <referenceContainer name="toki_footer">
+                <block class="Magento\Cms\Block\Block" name="footer_payment_logos" >
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer_payment_logos</argument>
+                    </arguments>
+                </block>
+           </referenceContainer>
+    </body>
+</page>

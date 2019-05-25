@@ -1,0 +1,240 @@
+.checkout-onepage-success {
+  .page-wrapper > .top-container {
+    margin-top: -21px;
+    max-width: 1366px;
+    width: 100%;
+    padding: 0px 0 0px;
+
+    .block-banners{
+      margin-bottom: 0px;
+      .banner-item-content{
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+
+  .thankyou-top-banner {
+    position: relative;
+
+    .thankyou-msg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 10;
+
+      img {
+        width: auto;
+        max-width: 490px;
+        margin-top: 65px;
+      }
+
+      .order-block {
+        max-width: 824px;
+        width: 100%;
+        text-align: center;
+        margin: -70px auto auto;
+      }
+
+      .text {
+        max-width: 824px;
+        width: 100%;
+        text-align: center;
+        color: @maincolor;
+        margin: 60px auto auto;
+        font-family: @font-family-2;
+        font-size: 18px;
+      }
+      #order-success-link{
+        color: @links;
+        font-family: @font-family-4;
+        font-size: 45px;
+
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .checkout-success {
+    display: none;
+  }
+  .unique-taste{
+    text-align: center;
+  }
+  .block-policy-content{
+    display: inline-block;
+    margin: 0 auto;
+    width:60%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid @bordercolor;
+
+    .box{
+      padding: 30px 20px 10px;
+      border-right: 1px solid @bordercolor;
+      min-height: 160px;
+
+      &:last-child{
+        border-right: 0px;
+      }
+
+      h3,h4{
+        margin-top: 20px;
+        font-family: @font-family-1;
+        font-size: 18px;
+
+      }
+    }
+
+  }
+
+  .link-container{
+    text-align: center;
+    padding: 25px 0;
+    width: 60%;
+    margin:0 auto;
+    margin:0 auto;
+    border-bottom: 1px solid @bordercolor;
+
+    h3,h4{
+      margin-bottom: 20px;
+      font-family: @titlefont;
+      font-size: 18px;
+    }
+
+    .action.primary{
+      margin:0 10px;
+      font-size: 14px;
+      border-radius: 20px;
+    }
+  }
+  .social-media-container{
+    text-align: center;
+
+    h3,h4{
+      margin-bottom: 25px;
+      margin-top:25px;
+      font-family: @titlefont;
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 1185px){
+  .checkout-onepage-success .thankyou-top-banner .thankyou-msg img{
+    width:46%;
+    margin-top: 25px;
+    max-width: none;
+  }
+  .checkout-onepage-success .thankyou-top-banner .thankyou-msg #order-success-link{
+    font-size: 32px;
+  }
+
+  .checkout-onepage-success .thankyou-top-banner .thankyou-msg .order-block {
+    margin-top: -40px;
+  }
+}
+
+@media (max-width: 991px){
+  .checkout-onepage-success .block-policy-content,
+  .checkout-onepage-success .link-container{
+    width: 87%;
+  }
+
+  .checkout-onepage-success .thankyou-top-banner .thankyou-msg img{
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .checkout-onepage-success .thankyou-top-banner .thankyou-msg  .order-block {
+    margin-top: -94px;
+  }
+  .checkout-onepage-success .thankyou-top-banner .thankyou-msg .text{
+    margin-top: 26px;
+    padding: 0 3px;
+  }
+}
+
+@media(max-width: 767px){
+  .checkout-onepage-success .block-policy-content .box{
+    border-right: 0;
+  }
+  .checkout-onepage-success .block-policy-content,
+  .checkout-onepage-success .link-container{
+    width: 96%;
+  }
+
+  .checkout-onepage-success .thankyou-top-banner .thankyou-msg .order-block {
+    margin-top: -82px;
+
+    #order-success-link {
+      font-size: 26px;
+    }
+  }
+
+  .checkout-onepage-success .thankyou-top-banner .thankyou-msg .text {
+    margin-top: 5px;
+  }
+
+
+
+}
+@media(max-width: 510px){
+  .checkout-onepage-success .thankyou-top-banner {
+    overflow-x: hidden;
+
+    .thankyou-msg {
+      .order-block {
+        margin-top: -54px;
+        line-height: 14px;
+
+        #order-success-link {
+          font-size: 22px;
+        }
+      }
+      .text{
+        margin-top: 5px;
+        line-height: 15px;
+        font-size: 12px;
+
+      }
+    }
+
+    img.bg{
+      height: 221px;
+      width: auto;
+      max-width: none;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  .checkout-onepage-success .link-container h3{
+    margin-bottom: 10px;
+  }
+  .checkout-onepage-success .link-container .action.primary{
+      margin-bottom: 10px;
+
+  }
+}
+
+@media(max-width: 340px){
+  .checkout-onepage-success .thankyou-top-banner .thankyou-msg img{
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .checkout-onepage-success .thankyou-top-banner .thankyou-msg .order-block {
+    margin-top: -50px;
+  }
+
+  .checkout-onepage-success .thankyou-top-banner .thankyou-msg .text{
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+}

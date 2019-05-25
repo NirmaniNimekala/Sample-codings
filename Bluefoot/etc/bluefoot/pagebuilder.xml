@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:gene:bluefoot:Module/etc/bluefoot/pagebuilder.xsd">
+    <content_blocks>
+        <templates>
+            <template name="core_farmer" file="Bluefoot::farmer-component.phtml" />
+            <template name="core_customer_quote" file="Bluefoot::pagebuilder/blocks/core/media/customer-quotes-slider-item.phtml" />
+            <template name="core_customer_quote_list" file="Bluefoot::pagebuilder/blocks/core/media/customer-quotes-slider.phtml" />
+            <template name="core_hero_banner" file="Bluefoot::pagebuilder/blocks/core/media/hero-banner.phtml" />
+            <template name="core_product_usp_item" file="Bluefoot::pagebuilder/blocks/core/media/product-usp-item.phtml" />
+            <template name="core_product_usps" file="Bluefoot::pagebuilder/blocks/core/media/product-usps.phtml" />
+            <template name="process_steps_item" file="Bluefoot::pagebuilder/blocks/core/media/process-steps-item.phtml" />
+            <template name="process_steps" file="Bluefoot::pagebuilder/blocks/core/media/process-steps.phtml" />
+            <template name="subscription_plans" file="Bluefoot::pagebuilder/blocks/core/other/subscription-plans.phtml" />
+            <template name="advanced_slider_item" file="Bluefoot::pagebuilder/blocks/core/media/advanced-slider-item.phtml" />
+            <template name="advanced_slider" file="Bluefoot::pagebuilder/blocks/core/media/advanced-slider.phtml" />
+            <template name="local_video" file="Bluefoot::pagebuilder/blocks/core/media/video.phtml" />
+            <template name="faq" file="Bluefoot::pagebuilder/blocks/core/special/faq.phtml" />
+            <template name="faq_item" file="Bluefoot::pagebuilder/blocks/core/special/faq-item.phtml" />
+        </templates>
+    </content_blocks>
+</config>

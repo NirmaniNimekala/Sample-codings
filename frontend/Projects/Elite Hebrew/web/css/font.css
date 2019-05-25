@@ -1,0 +1,18 @@
+
+@font-face {
+    font-family: 'NextExitFOT-Regular';
+    src: url('../fonts/NextExitRegular.eot');
+    src: url('../fonts/NextExitRegular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/NextExitRegular.woff2') format('woff2'),
+    url('../fonts/NextExitRegular.woff') format('woff'),
+    url('../fonts/NextExitRegular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NextExitFOT-Light';
+    src: url('../fonts/NextExitLight.eot');
+    src: url('../fonts/NextExitLight.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/NextExitLight.woff2') format('woff2'),
+    url('../fonts/NextExitLight.woff') format('woff'),
+    url('../fonts/NextExitLight.ttf') format('truetype');
+}

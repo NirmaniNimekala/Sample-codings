@@ -1,0 +1,50 @@
+<?php
+$_entity = $this->getEntity();
+$_urlPrefix = $block->getMediaUrl() . 'gene-cms';
+if ($_entity->getShowDots()):
+    $this->setCssClasses('bluefoot-slider-with-dots');
+endif;
+?>
+<?php if ($this->hasChildEntities('farmer_item')): ?>
+
+    <?php $_collection = $this->getChildEntities('farmer_item'); ?>
+    <div id="bluefoot-slider-<?php echo $this->getEntity()->getId(); ?>" class="farmer-component-homepage bluefoot-full-width"<?php echo $this->getStyleAttributes(); ?>>
+        <?php $_i = 0; foreach ($_collection as $_block): $_i++; ?>
+
+            <?php
+                $blockImage = $_block->getEntity();
+            ?>
+                <div class="col-xs-12 col-sm-6 col-md-4" style="padding: 5px;">
+                        <a href="/<?php echo $blockImage->getFarmerLink() ?>"><img class="img-responsive" style="width: 100%;" src="<?php echo $_urlPrefix . $blockImage->getFarmerImage();?>" onmouseout="this.src='<?php echo $_urlPrefix . $blockImage->getFarmerImage();?>';" onmouseover="this.src='<?php echo $_urlPrefix . $blockImage->getFarmerImageHover();?>';"/></a>
+                </div>
+
+        <?php endforeach; ?>
+    </div>
+
+    <script type="text/javascript">
+        require([
+            'jquery',
+            'slick'
+        ], function($){
+            if ($(window).width() < 768) {
+                $('#bluefoot-slider-<?php echo $this->getEntity()->getId(); ?>').slick({
+                    infinite: true,
+                    dots: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    responsive: [
+                        {
+                            breakpoint: 480,
+                            settings:
+                            {
+                                slidesToShow: 1
+                            }
+                        }
+                    ]
+                });
+            }
+        });
+    </script>
+
+<?php endif; ?>

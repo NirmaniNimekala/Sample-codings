@@ -1,0 +1,32 @@
+<?php 
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+
+/**
+ * BlueFoot
+ *
+ * Version 1.0
+ * @author Hob Adams <hob@gene.co.uk>
+ *
+ * Accordion Item Template
+ * @var $this \Gene\BlueFoot\Block\Entity\PageBuilder\Block\AbstractBlock
+ *
+ */
+$_entity = $this->getEntity();
+
+//if ($_entity->getOpenOnLoad()):
+//    $this->setCssClasses('active');
+//endif;
+?>
+<div  data-role="collapsible" class="bluefoot-faq-item bluefoot-accordion-outer bluefoot-full-width <?php echo $this->getCssAttributes();?>"<?php echo $this->getStyleAttributes(); ?>>
+    <div data-role="trigger">
+        <h4 class="bluefoot-faq-link bluefoot-full-width"><?php echo $_entity->getFaqQuestion(); ?></h4>
+    </div>
+
+    <div data-role="content" class="bluefoot-faq-inner bluefoot-full-width" style="display: none">
+        <?php echo $_entity->getFaqAnswer(); ?>
+    </div>
+</div>
+
